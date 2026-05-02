@@ -8,7 +8,7 @@ const Allpage = async ({ searchParams }) => {
     .toLowerCase()
     .trim();
 
-  const res = await fetch("http://localhost:3000/data.json", {
+  const res = await fetch("https://assignment-8-auth.vercel.app/data.json", {
     cache: "no-store",
   });
 

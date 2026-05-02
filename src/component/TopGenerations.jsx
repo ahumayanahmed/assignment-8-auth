@@ -2,7 +2,7 @@ import Marquee from "react-fast-marquee";
 import PhotoCard from "./PhotoCard";
 
 const TopGenerations = async () => {
-  const res = await fetch("http://localhost:3000/data.json");
+  const res = await fetch("https://assignment-8-auth.vercel.app/data.json");
   const photos = await res.json();
   const topPhotos = photos.slice(0, 4);
 
