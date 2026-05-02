@@ -12,6 +12,10 @@ const Allpage = async ({ searchParams }) => {
     cache: "no-store",
   });
 
+  if (!res.ok) {
+  return <div>Failed to load photos</div>;
+}
+
   const photos = await res.json();
 
   const filteredPhotos = query
