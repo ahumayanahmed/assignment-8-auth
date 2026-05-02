@@ -2,10 +2,11 @@ import Image from "next/image";
 
 const PhotoDetailsPage = async ({params}) => {
     const {id} = await params;
-    const res = await fetch('https://assignment-8-auth.vercel.app/data.json')
-    if (!res.ok) {
-  return <div>Failed to load photos</div>;
-}
+    const res = await fetch('https://assignment-8-auth.vercel.app/data.json',{
+    cache: "no-store",
+  });
+
+    
     const photos = await res.json()
 
     const tile = photos.find(p => p.id == id)
