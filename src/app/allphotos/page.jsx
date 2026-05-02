@@ -8,9 +8,7 @@ const Allpage = async ({ searchParams }) => {
     .toLowerCase()
     .trim();
 
-  const res = await fetch("https://assignment-8-auth.vercel.app/data.json", {
-    cache: "no-store",
-  });
+  const res = await fetch("https://assignment-8-auth.vercel.app/data.json");
 
   const photos = await res.json();
 
