@@ -1,5 +1,4 @@
 import Marquee from "react-fast-marquee";
-import Marque from "./Marque";
 import PhotoCard from "./PhotoCard";
 
 const TopGenerations = async () => {
